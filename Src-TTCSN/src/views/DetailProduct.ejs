@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/modal-2.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/DetailPro.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
+    <style>
+      .shop_attributes {
+        border-bottom: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="main-header" style="height: 0"></header>
+    <div
+      class="content"
+      style="margin-top: 130px; padding: 30px 10%; margin-bottom: 40px"
+    >
+      <div class="proContent">
+        <div class="row">
+          <div class="col-lg-6 detail-pro">
+            <img src="<%= dataProd.URLpic %>" alt="" style="width: 100%" />
+          </div>
+          <div class="col-lg-6 detail-pro">
+            <div class="link text-uppercase">
+              <a href="#" class="text-decoration-none">Trang Chủ</a> /
+              <a href="#" class="text-decoration-none">Product</a>
+            </div>
+            <h1 class="nameSaleProduct"><%= dataProd.NamePr %></h1>
+            <div class="is-divider small"></div>
+            <div class="price-wrapper">
+              <p class="price product-page-price price-on-sale fs-4 fw-bold">
+                <ins class="text-decoration-none"
+                  ><span class="woocommerce-Price-amount amount"
+                    ><%= dataProd.Price %>&nbsp;<span
+                      class="woocommerce-Price-currencySymbol"
+                      >₫</span
+                    ></span
+                  ></ins
+                >
+              </p>
+            </div>
+            <div class="row cart-totals">
+              <div class="cart-totals row col-4">
+                <div class="col-4 p-0">
+                  <button
+                    style="width: 100%; padding: 6px 25%"
+                    type="button"
+                    class="quantity-left-minus btn btn-danger btn-number"
+                    data-type="minus"
+                    data-field=""
+                    onmouseover="minus()"
+                  >
+                    -
+                  </button>
+                </div>
+                <div class="col-4 p-0">
+                  <input
+                    style="width: 100%; padding: 6px 25%"
+                    type="text"
+                    id="quantity"
+                    name="quantity"
+                    class="form-control input-number"
+                    value="1"
+                    min="1"
+                    max="100"
+                  />
+                </div>
+                <div class="col-4 p-0">
+                  <button
+                    style="width: 100%; padding: 6px 25%"
+                    type="button"
+                    class="quantity-right-plus btn btn-success btn-number"
+                    data-type="plus"
+                    data-field=""
+                    onmouseover="plus()"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="col-6 row button-add" style="padding: 38px 10px">
+                <button
+                  class="btn fw-bold"
+                  style="background-color: #d26e4b; color: white"
+                >
+                  THÊM VÀO GIỎ
+                </button>
+              </div>
+            </div>
+
+            <p class="fw-bold fs-5" style="margin-top: 10px">
+              "Hãy trở thành Affilicate của chúng tôi để tìm thêm thu nhập thụ
+              động, kiếm tiền online"
+            </p>
+            <button class="btn btn-danger">Đăng kí Affilicate</button>
+
+            <div class="product_meta">
+              <div class="sku_wrapper">
+                Mã: <span class="sku"><%= dataProd.ID %></span>
+              </div>
+
+              <div class="posted_in">
+                Danh mục:
+                <a
+                  href="http://mauweb.monamedia.net/converse/danh-muc/sale-off/"
+                  rel="tag"
+                  class="text-decoration-none"
+                  style="color: #000"
+                  ><%=TypeProd %></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tabbed-content detailShop" style="width: 80%">
+      <div class="tabsUI">
+        <div class="tabss row">
+          <span class="tab active col-md-3">Thông tin sản phẩm</span>
+          <span class="tab col-md-3">Đánh giá</span>
+        </div>
+        <div class="panes">
+          <div class="pane active">
+            <table style="width: 100%">
+              <tbody>
+                <tr class="shop_attributes">
+                  <th style="width: 50%">SKU</th>
+                  <td><%= dataProd.SKU %></td>
+                </tr>
+                <tr class="shop_attributes">
+                  <th>Chất liệu</th>
+                  <td><%= dataProd.Material %></td>
+                </tr>
+                <tr class="shop_attributes">
+                  <th>Giới tính</th>
+                  <td><%= dataProd.Gender %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pane">
+            <h3>Đánh Giá</h3>
+            <div class="comment"></div>
+            <div class="review">
+              <fieldset style="border: 2px solid #c30005; padding: 28px">
+                <div>***Review</div>
+                <div class="row">
+                  <div class="mb-3 col-lg-6">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Name</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="UserName"
+                    />
+                  </div>
+                  <div class="mb-3 col-lg-6">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="name@example.com"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label"
+                    >Comment</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <button class="btn btn-send">Send</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <script src="/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/updateCart.js"></script>
+    <script src="/js/addToCart.js"></script>
+    <script src="/js/footer.js"></script>
+    <script>
+      document.addEventListener("click", handle);
+
+      function handle(evt) {
+        if (evt.target.type === "button") {
+          return handleBtn(evt.target);
+        }
+      }
+
+      function handleBtn(btn) {
+        const elem = document.querySelector(`#${btn.dataset.for}`);
+        const nwValue = +elem.value + (btn.value === "-" ? -1 : 1);
+        elem.value = nwValue >= +elem.min ? nwValue : elem.min;
+      }
+    </script>
+    <script>
+      const tabs = document.querySelectorAll(".tab");
+      const tabActive = document.querySelector(".tab.active");
+      const panes = document.querySelectorAll(".pane");
+      console.log(panes);
+      tabs.forEach((tab, index) => {
+        const pane = panes[index];
+        tab.onclick = function () {
+          document.querySelector(".tab.active").classList.remove("active");
+          document.querySelector(".pane.active").classList.remove("active");
+
+          this.classList.add("active");
+          pane.classList.add("active");
+        };
+      });
+    </script>
+  </body>
+</html>

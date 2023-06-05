@@ -1,0 +1,33 @@
+.modal-2 {
+    margin: 0;
+    width: 300px;
+    height: 100%;
+    animation: modalFadeIn ease 0.8s;
+}
+.modal-2 .modal-content{
+    height: 100%;
+}
+.modal-2 .modal-header{
+    padding-top: 64px;
+}
+.modal-2 .modal-body button{
+    padding: 16px 16px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.bi-chevron-down{
+    float: right;
+}
+.hotline{
+    margin-top: 8px;
+}
+@keyframes modalFadeIn{
+    from {
+        transform: translateX(-150px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

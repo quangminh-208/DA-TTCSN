@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/modal-2.css" />
+    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/bootstrap-icons/font/bootstrap-icons.css" />
+    <style>
+      th {
+        text-align: center;
+      }
+      .abc {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="main-header" style="height: 0"></header>
+    <div class="row" style="margin: 127px 10% 0 10%">
+      <div
+        class="content d-flex justify-content-center align-items-center fw-bold fs-3"
+      >
+        Giỏ Hàng
+      </div>
+      <br />
+      <br />
+      <div class="col-lg-7">
+        <table text-align="center">
+          <thead>
+            <tr>
+              <th>Sản Phẩm</th>
+              <th class="item2">Đơn Giá</th>
+              <th>Số Lượng</th>
+              <th class="item2">Thành Tiền</th>
+            </tr>
+          </thead>
+          <tbody class="List-Cart"></tbody>
+        </table>
+        <button
+          class="btn update-cart"
+          style="background-color: #c30005; color: #fff"
+        >
+          Cập nhật giỏ hàng
+        </button>
+      </div>
+      <div class="col-lg-5">
+        <table text-align="center" style="width: 100%">
+          <thead>
+            <th colspan="2">Tổng Số Lượng</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tổng phụ</td>
+              <td class="abc subtotals">NULL đ</td>
+            </tr>
+            <tr>
+              <td>Giao hàng</td>
+              <td>
+                <div class="abc">Giao hàng miễn phí</div>
+                <div class="abc">Ước tính cho Việt Nam</div>
+                <div class="abc">Đổi địa chỉ</div>
+              </td>
+            </tr>
+            <tr>
+              <td>Tổng</td>
+              <td class="abc totals">NULL đ</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <a href="#"
+                  ><button style="margin-left: 32%; width: 200px">
+                    Thanh toán
+                  </button></a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script src="/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/showCart.js"></script>
+    <script src="/js/updateCart.js"></script>
+    <script src="/js/footer.js"></script>
+  </body>
+</html>

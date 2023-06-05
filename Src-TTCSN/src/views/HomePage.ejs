@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href=".../"> -->
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/modal-2.css" />
+    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/bootstrap-icons/font/bootstrap-icons.css" />
+    <style>
+      .col-sm-3 {
+        border: 1px solid #fff;
+      }
+      .col-sm-3:hover {
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="main-header"></header>
+
+    <div class="content mx-auto" style="margin-top: 140px; width: 80%">
+      <!--SLIDEBAR-->
+      <div class="slidebar">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="true"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/img/layout1.png" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="/img/layout2.png" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="/img/layout3.png" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="row align-center">
+        <div class="col-sneaker medium-6 small-12 large-4 col-lg-4 p-4">
+          <div class="col-inner text-center">
+            <div class="banner">
+              <div class="row">
+                <img
+                  src="http://mauweb.monamedia.net/converse/wp-content/uploads/2019/05/title_block_03.png"
+                  alt=""
+                  class="img-title"
+                />
+              </div>
+              <div class="row">
+                <img src="/img/banner1.png" alt="" class="img-content" />
+              </div>
+              <div class="btn-img">
+                <button>Xem sản phẩm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sneaker medium-6 small-12 large-4 p-4">
+          <div class="col-inner text-center">
+            <div class="banner">
+              <div class="row">
+                <img
+                  src="http://mauweb.monamedia.net/converse/wp-content/uploads/2019/05/title_block_03.png"
+                  alt=""
+                  class="img-title"
+                />
+              </div>
+              <div class="row">
+                <img src="/img/banner2.png" alt="" class="img-content" />
+              </div>
+              <div class="btn-img">
+                <button>Xem sản phẩm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sneaker medium-6 small-12 large-4 p-4">
+          <div class="col-inner text-center">
+            <div class="banner">
+              <div class="row">
+                <img
+                  src="http://mauweb.monamedia.net/converse/wp-content/uploads/2019/05/title_block_03.png"
+                  alt=""
+                  class="img-title"
+                />
+              </div>
+              <div class="row">
+                <img src="/img/banner3.png" alt="" class="img-content" />
+              </div>
+              <div class="btn-img">
+                <button>Xem sản phẩm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs-ui"></div>
+      <!--OTHER-->
+      <section class="sec_accessories">
+        <div class="sec_accessories_div">
+          <h3 class="text-center">PHỤ KIỆN KHÁC</h3>
+        </div>
+      </section>
+      <% for(var i = 0;i < otherproduct.length/4+1;i++) { %>
+      <div class="row">
+        <% for(var j = 0;j < 4;j++) { if(!otherproduct[4*i+j]) break; %>
+        <div class="col-lg-3 col-sm-6 p-3 product">
+          <img src="<%= otherproduct[4*i+j].URLpic %>" alt="" />
+          <div class="infor p-1">
+            <a href="#" class="p-2"><%= otherproduct[4*i+j].NamePr %></a>
+            <div class="price p-2">
+              <span><%= otherproduct[4*i+j].Price %> đ</span>
+            </div>
+            <div class="add-to-cart-button">
+              <a class="add-cart btn btn-primary btn-cart">THÊM VÀO GIỎ</a>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </div>
+    <div class="view_all_main">
+      <a href="/Other-Product" class="btn btn-light view_all"
+        ><span>XEM TẤT CẢ</span></a
+      >
+    </div>
+    <div class="insert pt-5"></div>
+    <div class="">
+      <div class="text-center sale_banner">
+        <img src="/img/banner-1-1.jpg" alt="" />
+        <div
+          class="text_banner d-flex justify-content-center align-items-center flex-column"
+        >
+          <h5 class="my-2 white">MONA SNEAKER</h5>
+          <h1 class="white">
+            KHUYẾN MÃI <span class="saless yellow">GIẢM GIÁ 50%</span>
+          </h1>
+          <a href="/Other-Product" class="btn btn-light white">XEM CHI TIẾT</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sale-content"
+      style="margin-top: 100px; width: 80%; margin-left: 10%"
+    >
+      <h3 class="h3">Sản Phẩm Giảm Giá</h3>
+      <% for(var i = 0;i < saleproduct.length/4+1;i++) { %>
+      <div class="row">
+        <% for(var j = 0;j < 4;j++) { if(!saleproduct[4*i+j]) break; %>
+        <div class="col-lg-3 col-sm-6 p-3 product">
+          <div class="box-circle fw-bold">30%</div>
+          <img src="<%= saleproduct[4*i+j].URLpic %>" alt="" />
+          <div class="infor p-1">
+            <a href="#" class="p-2"><%= saleproduct[4*i+j].NamePr %></a>
+            <div class="price p-2">
+              <span
+                ><%= saleproduct[4*i+j].Price*(100-saleproduct[4*i+j].Sale)/100
+                %> đ</span
+              >
+            </div>
+            <div class="add-to-cart-button">
+              <a class="add-cart btn btn-primary btn-cart">THÊM VÀO GIỎ</a>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/addToCart.js"></script>
+    <script src="/js/footer.js"></script>
+    <script>
+      // const header = document.querySelector('.header')
+      // document.onscroll = function(e) {
+      //     if(window.scrollY >= 130) {
+      //         header.classList.add('fixed-top')
+      //     }
+      // }
+    </script>
+  </body>
+</html>

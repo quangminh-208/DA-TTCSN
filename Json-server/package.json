@@ -1,0 +1,8 @@
+{"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "npx json-server --watch db.json"
+},
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

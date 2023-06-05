@@ -1,0 +1,28 @@
+@media (min-width: 576px) {
+    .modal-1 {
+        max-width: 570px;
+    }
+    .modal-2 {
+        margin: 0;
+    }
+}
+.modal-1{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-2 {
+    height: 100%;
+}
+.col-6 .title{
+    padding: 16px 0 ;
+    font-size: 20px;
+}
+.col-6-left {
+    border-right: 1px solid #ccc;
+}
+.input{
+    width: 100%;
+    margin-bottom: 8px;
+}

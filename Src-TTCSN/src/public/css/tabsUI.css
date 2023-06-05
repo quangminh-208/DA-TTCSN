@@ -1,0 +1,152 @@
+/*CAROUSEL*/
+
+.bannerCarousel {
+    padding: 40px 0;
+}
+
+#carouselSlide .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#carouselSlide .carousel-caption h1 {
+    font-size: 56px;
+    margin: 11.2px 0;
+    letter-spacing: 5px;
+}
+
+#carouselSlide .carousel-caption p {
+    font-size: 16px;
+    color: #F1F1F1;
+    width: 90%;
+    margin: 5px auto;
+}
+
+
+/*INTRODUCE*/
+
+.Introduce_item .space {
+    padding-top: 15px;
+}
+
+.Introduce_item .title {
+    margin-bottom: 16px;
+}
+
+.Introduce_item .title img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Introduce_item {
+    position: relative;
+}
+
+.Introduce_item .Introduce_detail a {
+    text-decoration: none;
+}
+
+.Introduce_item .Introduce_detail {
+    position: absolute;
+    top: 58%;
+    left: 29%;
+}
+
+.Introduce_item .Introduce_detail button {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: black;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.Introduce_item .Introduce_detail a {
+    color: white;
+}
+
+.Introduce_item:hover .Introduce_detail button {
+    opacity: 1;
+}
+
+
+/*ITEM*/
+
+.Item_top .collapse {
+    border-bottom: 2px solid #000;
+    margin-bottom: 40px;
+}
+
+.Item_top .navbar-nav .nav-item {
+    border-right: 1px solid #eee;
+}
+
+.Item_top .navbar-nav .nav-item a {
+    font-size: 18px;
+    color: #666666D9;
+}
+
+.Item_top .navbar-nav .active {
+    background-color: #000;
+}
+
+.Item_top .navbar-nav .active a {
+    color: #ffffff;
+}
+
+.Item_top .navbar-nav .nav-item:hover a {
+    background-color: #000;
+    color: #ffffff;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    display: none;
+}
+
+.Item_bottom .owl-carousel .owl-theme {
+    position: relative;
+}
+
+.Item_bottom .owl-nav .owl-prev {
+    position: absolute;
+    top: 48px;
+    left: -55px;
+}
+
+.Item_bottom .owl-carousel .owl-nav button.owl-prev {
+    font-size: 60px;
+}
+
+.Item_bottom .owl-nav .owl-next {
+    position: absolute;
+    top: 46px;
+    right: -51px;
+    background-color: white;
+}
+
+.Item_bottom .owl-carousel .owl-nav button.owl-next {
+    font-size: 60px;
+}
+
+.Item_bottom .item_text {
+    font-size: 15px;
+    padding: 10.08px 10px 5.16px
+}
+
+.Item_bottom .btn {
+    opacity: 0;
+    background-color: #c30005;
+    border-radius: 0;
+    color: white;
+    font-size: 12px;
+    padding: 3px 12px;
+    transition: all 0.5s;
+}
+
+.Item_bottom .item:hover .btn {
+    opacity: 1;
+}

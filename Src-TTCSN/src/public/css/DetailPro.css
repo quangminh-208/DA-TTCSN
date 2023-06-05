@@ -1,0 +1,85 @@
+.link {
+  margin-top: 50px;
+  margin-bottom: 7px;
+}
+.is-divider {
+  height: 3px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 1em 0 1em;
+  width: 100%;
+  max-width: 30px;
+}
+.row.cart-totals {
+  margin: 50px 0;
+}
+.btn.btn-danger {
+  background-color: #c30005;
+}
+.product_meta {
+  margin-top: 30px;
+}
+.product_meta > div {
+  display: block;
+  border-top: 1px dotted #ddd;
+  padding: 5px 0;
+  font-size: 0.8em;
+}
+tr {
+  margin: 7px 0;
+  border-bottom: 1px solid #ececec;
+}
+th,
+td {
+  padding: 0.5em;
+}
+.tabbed-content {
+  margin-bottom: 50px;
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.tab {
+  cursor: pointer;
+  background-color: #ccc;
+  border: 1px solid #000;
+  padding: 8px 16px;
+}
+.tab.active {
+  border-bottom: none;
+}
+.panes {
+  border: 1px solid #ccc;
+  padding: 50px;
+}
+.pane {
+  display: none;
+}
+.pane.active {
+  display: block;
+}
+button.btn.btn-send {
+  background-color: #c30005;
+  color: #fff;
+}
+.detail-pro {
+  padding-left: 32px;
+}
+input#quantity {
+  padding: 6px 10px;
+}
+.detailShop {
+  width: 90% !important;
+  margin: 40px 5%;
+}
+.tabss.row {
+  margin: auto;
+}
+@media only screen and (max-width: 800px) {
+  .detailShop {
+    padding: 0;
+  }
+  .content {
+    padding: 0;
+  }
+}
